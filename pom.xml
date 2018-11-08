@@ -8,6 +8,7 @@
 	<version>0.0.1</version>
     <modules>
         <module>config-server</module>
+		<module>service-discovery</module>
     </modules>
     <packaging>pom</packaging>
 

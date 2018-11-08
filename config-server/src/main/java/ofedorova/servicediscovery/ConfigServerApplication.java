@@ -1,4 +1,4 @@
-package ofedorova.configserver;
+package ofedorova.servicediscovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
