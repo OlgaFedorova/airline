@@ -8,4 +8,4 @@ spring:
       server:
         git:
           uri: https://github.com/OlgaFedorova/airline.git
-          search-paths: config-files*
+          search-paths: config-files/'{application}'
