@@ -73,7 +73,7 @@
                         <image>
                             <name>olgafedorova/${project.build.finalName}</name>
                             <build>
-                                <from>openjdk:latest</from>
+                                <from>openjdk:8-jdk</from>
                                 <entryPoint>java -jar /application/${project.build.finalName}.jar</entryPoint>
                                 <assembly>
                                     <basedir>/application</basedir>
@@ -91,7 +91,7 @@
                                     <tag>latest</tag>
                                 </tags>
                                 <ports>
-                                    <port>8761</port>
+                                    <port>5000</port>
                                 </ports>
                             </build>
                             <run>

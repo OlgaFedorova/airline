@@ -9,6 +9,8 @@
     <modules>
         <module>config-server</module>
 		<module>service-discovery</module>
+		<module>gateway-server</module>
+		<module>airline-planes</module>
     </modules>
     <packaging>pom</packaging>
 

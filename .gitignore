@@ -39,3 +39,5 @@ buildNumber.properties
 /.idea/
 /airline.iml
 /service-discovery/service-discovery.iml
+/zipkin-server/zipkin-server.iml
+/gateway-server/gateway-server.iml

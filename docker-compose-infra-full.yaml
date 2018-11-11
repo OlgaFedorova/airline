@@ -1,0 +1,89 @@
+version: '3'
+services:
+  config-server:
+    hostname: config-server
+    container_name: config-server
+    image: olgafedorova/config-server
+    ports:
+      - "5000:5000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/actuator/health"]
+      interval: 60s
+      timeout: 30s
+      retries: 5
+    networks:
+      - airline
+  service-discovery:
+    hostname: service-discovery
+    container_name: service-discovery
+    restart: always
+    image: olgafedorova/service-discovery
+    ports:
+      - "8761:8761"
+    depends_on:
+      - config-server
+    networks:
+      - airline
+  rabbitmq:
+    hostname: rabbitmq
+    container_name: rabbitmq
+    image: rabbitmq:3.7.0-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - airline
+  mysql:
+    hostname: mysql
+    container_name: mysql
+    image: mysql:5.7.21
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=zipkin
+    networks:
+      - airline
+  mongo:
+    hostname: mongo
+    container_name: mongo
+    image: mongo:3.4.10
+    ports:
+      - "27017:27017"
+    networks:
+      - airline
+  redis:
+    hostname: redis
+    container_name: redis
+    image: redis:3.2-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - airline
+  zipkin-server:
+    hostname: zipkin-server
+    container_name: zipkin-server
+    restart: always
+    image: olgafedorova/zipkin-server
+    ports:
+      - "9999:9999"
+    depends_on:
+      - config-server
+      - service-discovery
+    networks:
+      - airline
+  gateway-server:
+    hostname: gateway-server
+    container_name: gateway-server
+    restart: always
+    image: olgafedorova/gateway-server
+    ports:
+      - "8888:8888"
+    depends_on:
+      - config-server
+      - service-discovery
+    networks:
+      - airline
+networks:
+  airline:
+    driver: bridge
