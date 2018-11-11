@@ -41,3 +41,4 @@ buildNumber.properties
 /service-discovery/service-discovery.iml
 /zipkin-server/zipkin-server.iml
 /gateway-server/gateway-server.iml
+/airline-planes/airline-planes.iml
