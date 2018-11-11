@@ -1,15 +1,4 @@
-server:
-  port: 8761
-
 eureka:
   instance:
-    hostname: localhost
-    health-check-url-path: /actuator/health
-    status-page-url-path: /actuator/info
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-logging:
-  level:
-    org.springframework.cloud: 'DEBUG'
+    hostname: service-discovery
 
