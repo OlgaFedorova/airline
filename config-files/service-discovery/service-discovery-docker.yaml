@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: service-discovery
     health-check-url-path: /actuator/health
     status-page-url-path: /actuator/info
   client:
