@@ -2,3 +2,16 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://service-discovery:8761/eureka/
+
+spring:
+  rabbitmq:
+    port: 5672
+    host: redis
+  datasource:
+    schema: classpath:/mysql.sql
+    url: jdbc:mysql://${MYSQL_HOST:mysql}/zipkin?autoReconnect=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    initialize: true
+    continue-on-error: true
