@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+  data:
+    mongodb:
+      database: planes
+      host: mongodb
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://service-discovery:8761/eureka/
