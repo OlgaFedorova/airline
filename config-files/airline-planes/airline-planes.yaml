@@ -1,8 +1,8 @@
-erver:
+server:
   port: 50001
 spring:
   rabbitmq:
-    host: rabbitmq
+    host: localhost
     port: 5672
     username: guest
     password: guest
@@ -17,4 +17,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://service-discovery:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
