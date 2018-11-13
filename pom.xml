@@ -12,6 +12,7 @@
 		<module>gateway-server</module>
 		<module>zipkin-server</module>
 		<module>airline-planes</module>
+		<module>airline-flights</module>
     </modules>
     <packaging>pom</packaging>
 

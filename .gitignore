@@ -42,3 +42,4 @@ buildNumber.properties
 /zipkin-server/zipkin-server.iml
 /gateway-server/gateway-server.iml
 /airline-planes/airline-planes.iml
+/airline-flights/airline-flights.iml
