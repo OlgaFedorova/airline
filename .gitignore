@@ -43,3 +43,4 @@ buildNumber.properties
 /gateway-server/gateway-server.iml
 /airline-planes/airline-planes.iml
 /airline-flights/airline-flights.iml
+/admin-server/admin-server.iml

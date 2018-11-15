@@ -13,6 +13,7 @@
 		<module>zipkin-server</module>
 		<module>airline-planes</module>
 		<module>airline-flights</module>
+        <module>admin-server</module>
     </modules>
     <packaging>pom</packaging>
 
